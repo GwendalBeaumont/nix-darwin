@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ../configs/git
     ../configs/gpg
   ];
 
@@ -12,7 +11,6 @@
   };
 
   programs = {
-    git.enable = true;
     gpg.enable = true;
   };
 }
