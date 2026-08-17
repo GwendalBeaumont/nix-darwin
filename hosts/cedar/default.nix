@@ -9,9 +9,6 @@
   };
 
   nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
     hostPlatform = "aarch64-darwin";
   };
 
@@ -73,13 +70,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     git
-    gnupg
   ];
-
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
 
   documentation.enable = false;
   system.tools.darwin-uninstaller.enable = false;
